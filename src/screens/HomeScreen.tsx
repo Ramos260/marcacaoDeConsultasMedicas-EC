@@ -1,5 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import { FlatList, RefreshControl, TouchableOpacity } from 'react-native';
@@ -10,8 +11,6 @@ import theme from '../styles/theme';
 import { Appointment } from '../types/appointments';
 import { Doctor } from '../types/doctors';
 import { RootStackParamList } from '../types/navigation';
-
-import { useFocusEffect } from '@react-navigation/native';
 
 type HomeScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
